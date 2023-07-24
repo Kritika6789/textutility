@@ -1,6 +1,7 @@
 import React ,{useState} from 'react'
 
 export default function TextForm(props) {
+  
  const [text, setText]= useState('Enter your text here');
  const handleclick=()=>{
     console.log("hello");
@@ -35,6 +36,8 @@ export default function TextForm(props) {
 console.log("onchange");
  setText(event.target.value);
  }
+
+ 
   return (
     <>
     <div className='container'>
@@ -52,7 +55,7 @@ console.log("onchange");
   </div>
   <div className="container my-3" >
     <h1>Your Text Summary</h1>
-     <p> {text.split(" ").length} words and {text.length} characters </p>
+     <p> {text.length===0 ? text.split(" ").length -1 : text.split(" ").length} words and {text.length} characters </p>
      <p>{0.008 * text.split(" ").length}Minutes Read</p>
      <h2>Preview</h2>
      <p >{text.length>0?text:"Enter something in textbox to preview"}</p>
