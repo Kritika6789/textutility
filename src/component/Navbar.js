@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom';
+// import { a } from 'react-router-dom';
 export default function Navbar(props) {
    const myColor=()=>{
     document.body.style.backgroundColor=document.getElementById("Mycolorpicker").value;
@@ -11,22 +11,22 @@ export default function Navbar(props) {
     <div>
        <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
   <div className="container-fluid">
-    <Link className="navbar-brand" to="/">{props.title}</Link>
+    <a className="navbar-brand" href="#">{props.title}</a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <Link className="nav-link active" aria-current="page" to="/">Home</Link>
+          <a className="nav-a active mx-3" aria-current="page" href="#">Home</a>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/about">{props.AboutText}</Link>
+          {/* <a className="nav-a" href="#">{props.AboutText}</a> */}
         </li>
-        <li className="nav-item dropdown">
-          <Link className="nav-link dropdown-toggle" to="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        {/* <li className="nav-item dropdown">
+          <a className="nav-a dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
-          </Link>
+          </a>
           <ul className="dropdown-menu">
             <li><a className="dropdown-item" href="/" >Capitalize</a></li>
             <li><a className="dropdown-item" href="/">Font Style</a></li>
@@ -34,7 +34,7 @@ export default function Navbar(props) {
             <li><a className="dropdown-item" href="/">Font Color</a></li>
           </ul>
         </li>
-        
+         */}
       </ul>
       {/* <form className="d-flex" role="search">
         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
